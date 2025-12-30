@@ -23,14 +23,22 @@ Unlike traditional ANNs (2nd Generation) that use continuous activation function
 
 ## Project Structure
 ```text
-snn-engine/
-├── data/           # Dataset storage (e.g., MNIST spike-encoded)
-├── src/            # Source code for the SNN engine
-│   ├── neuron.py   # LIF Model physics
-│   ├── network.py  # Layer management and propagation
-│   └── stdp.py     # Learning rules (Synaptic Plasticity)
-├── experiments/    # Training logs and visualization outputs
-└── main.py         # Entry point for simulation
+snn-scratch-engine/
+├── data/           # Dataset storage
+├── docs/           # Documentation and references
+├── experiments/    # Experiment results and logs
+├── src/            # Core engine source code
+│   ├── __init__.py
+│   ├── neuron.py   # LIF Neuron logic
+│   ├── layer.py    # Layer management
+│   ├── synapse.py  # Synapse and STDP implementation
+│   ├── network.py  # Network assembly
+│   ├── encoding.py # Spike encoding mechanisms
+│   └── monitor.py  # State monitoring and recording
+├── tests/          # Unit and integration tests
+├── main.py         # Main entry point
+├── requirements.txt
+└── README.md
 ```
 
 ## Roadmap (5-Month Plan)
